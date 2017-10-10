@@ -57,7 +57,7 @@ public class Raspberry2FTP {
 
                         //move file if it is older than 1 day
                         DateTime createDate = new DateTime(file.lastModified());
-                        if (getDateDifference(createDate) > 1) {
+                        if (getDateDifference(createDate) >= 1) {
                             moveFile(createDate, file, folder);
                             fileList.remove(file.getName());
                         }
